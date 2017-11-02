@@ -1,0 +1,50 @@
+{
+  "name": "hn-pwa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:client dev:server",
+    "dev:client": "webpack-dev-server --hot --inline --config ./webpack/webpack.config.js --port 3001 --host 0.0.0.0",
+    "dev:server": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/server.ts",
+    "build:client": "webpack --display-error-details --config ./webpack/webpack.config.js"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.0.39",
+    "@types/koa-bodyparser": "^3.0.25",
+    "@types/koa-compress": "^2.0.7",
+    "@types/koa-router": "^7.0.23",
+    "@types/koa-static": "^3.0.1",
+    "@types/node": "^8.0.47",
+    "@types/react": "^16.0.19",
+    "@types/react-dom": "^16.0.2",
+    "@types/superagent": "^3.5.6",
+    "nodemon": "^1.12.1",
+    "npm-run-all": "^4.1.1",
+    "prettier": "^1.7.4",
+    "ts-loader": "^3.1.1",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.6.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.3"
+  },
+  "dependencies": {
+    "apollo-client-preset": "^1.0.1",
+    "apollo-server-koa": "^1.2.0",
+    "graphql": "^0.11.7",
+    "graphql-tag": "^2.5.0",
+    "graphql-tools": "^2.7.1",
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-compress": "^2.0.0",
+    "koa-proxy": "^0.9.0",
+    "koa-router": "^7.2.1",
+    "koa-static": "^4.0.1",
+    "react": "^16.0.0",
+    "react-apollo": "^2.0.0",
+    "react-dom": "^16.0.0",
+    "react-loadable": "^5.3.1",
+    "styled-components": "^2.2.3",
+    "superagent": "^3.8.0"
+  }
+}
